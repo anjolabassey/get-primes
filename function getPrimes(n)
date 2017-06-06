@@ -1,25 +1,30 @@
 function getPrimes(n) {
   let numArray = [];
   
+  if (typeof n === 'string') {
+    console.log('Please input a number');
+  }  
+  else  (n <= 0); {
+    console.log('Please input a positive number')
+  }
+ 
+  
   for (i = 2; i <= n; ++i) {
     numArray.push(i);
   }
 
   for (i = 0; i < numArray.length; ++i) {
-    //this for loop helps to go through each element of array
 
     for (j = numArray[i]; j < numArray[numArray.length - 1]; ++j) {
-      //get's the value of i'th element
       for (k = 2; j * k <= numArray[numArray.length - 1]; ++k) {
-        //find the index of multiples of ith element in the array
         index = numArray.indexOf(j * k);
-        if (index > -1) { //remove the multiples
+        if (index > -1) { 
           numArray.splice(index, 1);
         }
       }
 
     }
   }
-  return numArray; //return result
+  return numArray; 
 }
-getPrimes(6);
+getPrimes();
