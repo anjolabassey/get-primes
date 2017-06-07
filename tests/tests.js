@@ -1,3 +1,6 @@
+const Jasmine = require('jasmine');
+var getprime = require('../app/getPrime.js');
+
 describe('getPrime()' , function() {
   it("getPrime()should return the correct prime number value of an input", function() {
     expect.getPrime(5)).toBe([2,3,5]);
